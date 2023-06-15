@@ -1,0 +1,38 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "users": [
+    {
+      "name": "kirti",
+      "email": "admin@gmail.com",
+      "password": "111",
+      "address": "USA",
+      "id": 1
+    },
+    {
+      "name": "swrer",
+      "email": "creatpix114@gmail.com",
+      "gender": "male",
+      "password": "ty",
+      "address": "sdfdf",
+      "id": 2
+    },
+    {
+      "name": "kirti",
+      "email": "creatpix114@gmail.com",
+      "gender": "female",
+      "password": "22",
+      "address": "sdsff",
+      "country": "India",
+      "technology": [
+        "java"
+      ],
+      "id": 3
+    }
+  ]
+}
