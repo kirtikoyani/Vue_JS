@@ -25,9 +25,6 @@ const app = new Vue({
       },
       incrementCount() {
         this.initialCount++;
-      },
-      updateMessage() {
-        this.message = 'Updated message!';
       }
     }
   });

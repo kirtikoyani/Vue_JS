@@ -1,34 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.18/vue.min.js"></script>
-</head>
-<body>
-<h1>Wellocme in vue js</h1>
-<section id="fisrt_prac">
-    <h2>my first goal</h2>
-    <h3>{{coursegoal}}</h3>
-    <p>{{outputGoal()}}</p>
-    <p>learn more... <a v-bind:href="vueLink">about vue js</a></p>
-    <input type="text" v-on:input="setName($event,'koyani')">
-    <p>{{name}}</p>
-    <span v-pre>{{ Does not expect expression }}{{1+1}}</span>
-    <div>
-        <!-- <p v-once>{{count}}</p>
-        <button type="submit" @click="count++" >add</button> -->
+  </head>
+  <body>
+    <h1>Wellocme in vue js</h1>
+    <section id="fisrt_prac">
+      <h2>my first goal</h2>
+      <h3>{{coursegoal}}</h3>
+      <p>{{outputGoal()}}</p>
+      <p>learn more... <a v-bind:href="vueLink">about vue js</a></p>
+      <input type="text" v-on:input="setName($event,'koyani')" />
+      <p>{{name}}</p>
+      <span v-pre>{{ Does not expect expression }}{{1+1}}</span>
+      <div>
+          <!-- <p v-once>{{initialCount}}</p> -->
+          <p v-once>{{initialCount}}</p>
+        <button @click="incrementCount()">add</button>
+        <!-- the click event's propagation will be stopped -->
+        <!-- <button @click.stop="doThis">click.stop</button> -->
 
-    </div>
-    <div>
+        <!-- the submit event will no longer reload the page -->
+        <!-- <button @submit.prevent="initialCount">submit.prevent</button> -->
+
+        <!-- modifiers can be chained -->
+        <!-- <button @click.stop.prevent="initialCount">click.stop.prevent</button> -->
+
+        <!-- just the modifier -->
+        <!-- <button @submit.prevent>submit.prevent</button> -->
+
+        <!-- only trigger handler if event.target is the element itself -->
+        <!-- i.e. not from a child element -->
+        <!-- <button @click.self="initialCount">click.self</button> -->
+      </div>
+      <!-- <div>
         <h1 v-once>{{ message }}</h1>
         <p>This paragraph will be updated dynamically:</p>
         <button @click="updateMessage">Update Message</button>
-      </div>
+      </div> -->
+    </section>
 
-</section>
-
-<script src="./script.js"></script>
-</body>
+    <script src="./script.js"></script>
+  </body>
 </html>
