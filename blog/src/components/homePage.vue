@@ -1,7 +1,8 @@
 <template>
 <h1>Home component {{'kiitu'.length}}</h1>
 <h1>10+24= {{10+24}}</h1>
-
+<p v-text="msg"></p>
+<span v-html="rawHtml"></span>
 <button v-on:click="getData('Button 1 clicked')">Click me</button>
 <button v-on:dblclick="getData('Button dubble clicked')">Click me</button>
 <!-- <h1>Email: {{email}}</h1> -->
@@ -17,7 +18,9 @@
         email:'kittu@yoo.com',
         getName:function(){
           return"urmii nalayak(mari bajuvadi)"
-        }
+        },
+        msg:'kitti',
+        rawHtml:'<h1>😁😁😁<p>hii<h2>mam</h2></p></h1>'
       }
     },methods:{
       getData(data){

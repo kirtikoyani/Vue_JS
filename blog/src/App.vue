@@ -1,6 +1,7 @@
 <template>
-  <!-- <homePage />
-  <myProfile /> -->
+  <!-- <homePage /> -->
+  <!-- <myProfile /> -->
+<eventExmp/>
   <!-- <TwoWayBinding /> -->
   <!-- <twoInput /> -->
   <!-- <IfElse /> -->
@@ -23,7 +24,7 @@
 <router-link to="/profile/kiti">profile</router-link><br>
 <router-view></router-view> -->
 <!-- <callApi/> -->
-<Proj1Form/>
+<!-- <Proj1Form/> -->
 </template>
 
 
@@ -31,7 +32,7 @@
 
 // import homePage from './components/homePage.vue'
 // import myProfile from './components/myProfile.vue'
-// import eventExmp from './components/eventExmp.vue';
+import eventExmp from './components/eventExmp.vue';
 // import TwoWayBinding from './components/twoWayBinding.vue';
 // import twoInput from './components/twoInput.vue';
 // import IfElse from './components/ifElse.vue';
@@ -50,7 +51,7 @@
 // import CreateMethod from './components/createMethod.vue';
 // import RhomePage from './components/RhomePage.vue';
 // import callApi from './components/callApi.vue';
-import Proj1Form from './components/proj1Form.vue';
+// import Proj1Form from './components/proj1Form.vue';
 
 
 export default {
@@ -58,7 +59,7 @@ export default {
   components: {
     // homePage,
     // myProfile,
-    // eventExmp,
+    eventExmp,
     // TwoWayBinding,
     // twoInput,
     // IfElse,
@@ -74,7 +75,7 @@ export default {
     // CreateMethod,
     // RhomePage,
     // callApi,
-    Proj1Form
+    // Proj1Form
 }
 }
 </script>

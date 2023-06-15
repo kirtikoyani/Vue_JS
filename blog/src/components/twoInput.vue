@@ -23,7 +23,7 @@
 <br><br>
 
 <h4>Selected Technologies : {{technology}}</h4>
-<h4>I am {{gender}}</h4>
+<h4>I am {{gender}},my email: {{ email }}</h4>
 </template>
 
 
