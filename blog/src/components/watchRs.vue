@@ -16,6 +16,7 @@ export default {
     watch:{
         count(val,prev){
             if(val>5 && val>prev){
+                // console.log(prev,val)
                 this.count=5
             }
             if(val<0 && val<prev){

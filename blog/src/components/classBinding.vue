@@ -2,6 +2,7 @@
 <template>
 <h1>Css binding</h1>
 <h2 :class="applyStyle">Css class</h2>
+<div :style="{border:'2px solid',borderColor: colorfull ? 'red':'blue'}">hwlow</div>
 <button v-on:click="colorfull=!colorfull">Apply & remove style</button>
 </template>
 
