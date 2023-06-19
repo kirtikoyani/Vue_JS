@@ -1,5 +1,5 @@
-const app = new Vue({
-    el: "#fisrt_prac",
+const app = Vue.createApp({
+  // el: "#fisrt_prac",
     data() {
       return {
         coursegoal: "kirti is here",
@@ -8,7 +8,12 @@ const app = new Vue({
         vueLink: "https://vuejs.org/guide/introduction.html",
         name: "",
         initialCount: 0,
-        message: 'Hello, World!'
+        message: 'Hello, World!',
+        num: {
+          a: 10,
+          b: 20
+        },
+        numm: {}
       };
     },
     methods: {
@@ -26,5 +31,24 @@ const app = new Vue({
       incrementCount() {
         this.initialCount++;
       }
+    },
+    created() {
+      setTimeout(() => {
+        console.log('setTimeout Called');
+        console.log('Num', this.num);
+        this.num.a = 30;
+        console.log('a:', this.num.a);
+      }, 2000);
+
+      Vue.set(this.numm, 'c', 10);
+      Vue.set(this.numm, 'd', 20);
+
+      setTimeout(() => {
+        console.log('setTimeout Called');
+        console.log('Num', this.numm);
+        this.numm.c = 30;
+        console.log('c:', this.numm.c);
+      }, 2000);
     }
   });
+  app.mount('#fisrt_prac');

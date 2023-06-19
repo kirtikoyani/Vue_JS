@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Reactivity Example</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+</head>
+<body>
+  <div id="app">
+    <p>Reactive Message: {{ reactiveMessage }}</p>
+    <p>Non-Reactive Message: {{ nonReactiveMessage }}</p>
+    <button @click="updateMessage">Update Message</button>
+
+    <li v-for="{ message } in items">
+        {{ message }}
+      </li>
+
+      <!-- with index alias -->
+      <li v-for="({ message }, index) in items">
+        {{ message }} {{ index }}
+      </li>
+  </div>
+
+  <script>
+    new Vue({
+      el: '#app',
+      data: {
+        message: 'Initial Message',
+        reactiveMessage: 'reactive msg',
+        items: [{ message: 'Foo' }, { message: 'Bar' }]
+      },
+      computed: {
+        nonReactiveMessage() {
+          return this.message;
+        }
+      },
+      methods: {
+        updateMessage() {
+          setTimeout(() => {
+            // this.message = 'Updated Message';
+            this.reactiveMessage = this.message;
+          }, 2000);
+        }
+      }
+    });
+  </script>
+</body>
+</html>

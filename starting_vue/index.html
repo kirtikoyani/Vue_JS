@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.18/vue.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.18/vue.min.js"></script> -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
   </head>
   <body>
     <h1>Wellocme in vue js</h1>
@@ -18,7 +19,7 @@
       <span v-pre>{{ Does not expect expression }}{{1+1}}</span>
       <div>
           <!-- <p v-once>{{initialCount}}</p> -->
-          <p v-once>{{initialCount}}</p>
+        <p v-once>{{initialCount}}</p>
         <button @click="incrementCount()">add</button>
         <!-- the click event's propagation will be stopped -->
         <!-- <button @click.stop="doThis">click.stop</button> -->
@@ -41,6 +42,11 @@
         <p>This paragraph will be updated dynamically:</p>
         <button @click="updateMessage">Update Message</button>
       </div> -->
+
+      <!-- //without reactivity -->
+<h1>without reactivity SUM: {{num.a+num.b}}</h1>
+<!-- //with reactivity -->
+<h1>with reactivity SUM: {{numm.c+numm.d}}</h1>
     </section>
 
     <script src="./script.js"></script>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  </head>
+  <body>
+    <section id="fisrt_prac">
+      <h2>My course goals</h2>
+      <input type="text" v-model="mygoalsVal">
+      <button @click="addgoal()">Add goal</button>
+      <p v-if="goals.length===0">no goals add here</p>
+      <ul v-else>
+        <li v-for="(goal, index) in goals" :style="{padding:'20px'}" @click="removeEle(index)">{{ goal }} - {{ index }}
+          <input type="text" @click.stop>
+        </li>
+      </ul>
+    </section>
+    <script src="./script.js"></script>
+  </body>
+</html>
