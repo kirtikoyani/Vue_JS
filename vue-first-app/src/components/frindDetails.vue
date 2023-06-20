@@ -6,7 +6,8 @@
       <li><strong>Phone : </strong>{{ phoneNumber }}</li>
       <li><strong>Email : </strong>{{ emailAddress }}</li>
     </ul>
-    <input ref="input1">
+    <button @click="toggleFavorite">Toggle</button>
+    <input ref="input1" value="kirti">
     <button @click="logInputValue">Log Input Value</button>
   </div>
   <hr>
@@ -14,6 +15,7 @@
 
 <script>
 export default {
+  emits:['toggle-favorite'],
   name: 'friendDetails',
   // props:['name','phoneNumber','emailAdress'],
   props: {
@@ -64,7 +66,8 @@ export default {
       this.detailsAreVisible = !this.detailsAreVisible;
     },
     toggleFavorite() {
-      this.$emit('toggle-favorite', this.id);
+
+      this.$emit('toggle-favorite', this.id ,this.some());
     },
   }
 }

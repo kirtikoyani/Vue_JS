@@ -9,6 +9,7 @@
         @toggle-favorite="toggleFavoriteStatus" /> -->
   <div>
     <frindDetails
+        ref="here"
         v-for="friend in friends"
         :key="friend.id"
         :id="friend.id"
@@ -16,15 +17,20 @@
         :phone-number="friend.phone"
         :email-address="friend.email"
         :is-favorite="friend.isFavorite"
-        @toggle-favorite="toggleFavoriteStatus" ref="myComponentRef" ></frindDetails>
+        @toggle-favorite="toggleFavoriteStatus" ></frindDetails>
+        <!-- <frindDetails ref="myComponentRef" /> -->
     <button @click="logComponentData">Log Component Data</button>
   </div>
   <refReactive/>
+  <props-video videoUrl="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" />
+  <props-video videoUrl="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4" />
+  <props-video videoUrl="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4" />
   <!-- <lifeCycle/> -->
 </template>
 
 <script>
 import frindDetails from './components/frindDetails.vue'
+import PropsVideo from './components/propsVideo.vue'
 // import LifeCycle from './components/lifeCycle.vue';
 import refReactive from './components/refReactive.vue'
 
@@ -33,6 +39,7 @@ export default {
   components: {
     frindDetails,
     refReactive,
+    PropsVideo,
     // LifeCycle
   },data(){
     return{
@@ -58,12 +65,14 @@ export default {
     logComponentData() {
       // console.log(this.$refs.myComponentRef.some);
       this.$refs.myComponentRef.some();
+      this.$refs.myComponentRef.logInputValue();
     },
-    toggleFavoriteStatus(friendId) {
+    toggleFavoriteStatus(friendId , some) {
       const identifiedFriend = this.friends.find(
         (friend) => friend.id === friendId
       );
       identifiedFriend.isFavorite = !identifiedFriend.isFavorite;
+      return some
     }
   }
 }
