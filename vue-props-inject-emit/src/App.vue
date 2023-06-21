@@ -1,16 +1,28 @@
 <template>
 <div>
 <parent-com/>
+<ref-vs-normal/>
+<prop-drill-parent/>
+<search-comp/>
+<event-bus/>
 </div>
 </template>
 
 <script>
 import ParentCom from './components/parentComp.vue'
+import RefVsNormal from './components/RefVsNormal.vue'
+import PropDrillParent from './components/PropDrillParent.vue'
+import EventBus from './components/eventBus.vue'
+import SearchComp from './components/searchComp.vue'
 
 export default {
   name: 'App',
   components: {
-    ParentCom
+    ParentCom,
+    RefVsNormal,
+    PropDrillParent,
+    EventBus,
+    SearchComp
   }
 }
 </script>

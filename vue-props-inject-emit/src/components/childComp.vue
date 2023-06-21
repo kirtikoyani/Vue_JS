@@ -9,13 +9,18 @@
     <button @click="$emit('add', Math.random()+1)">
     Add Math.random()
   </button>
+    <button @click="$emit('multiply', 6,3)">
+    multiply 2 & 3
+  </button>
+  <GrandChild />
 </div>
 </template>
 
 <script>
+import GrandChild from './grandChild.vue';
 export default {
-    name: 'ChildComp',
-    emits:['toggle-age'],
+    name: "ChildComp",
+    emits: ["toggle-age"],
     props: {
         id: {
             type: String,
@@ -40,11 +45,12 @@ export default {
     },
     methods: {
         some() {
-            console.log('jdjfiji')
+            console.log("jdjfiji");
         },
         toggleage() {
-            this.$emit('toggle-age', this.id, this.some());
+            this.$emit("toggle-age", this.id, this.some());
         },
-    }
+    },
+    components: { GrandChild }
 }
 </script>
