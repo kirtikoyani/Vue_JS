@@ -1,5 +1,5 @@
 <template>
-<h2>Alots in vue js 3</h2>
+<h2>Slots in vue js 3</h2>
 <sloT2>
     <template v-slot:header>
         <h1>torist plase</h1>
