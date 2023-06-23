@@ -11,6 +11,7 @@
     </fram-e>
     <fram-e/>
     <parent-comp/>
+    <scopedSlotParent/>
   </div>
 </template>
 
@@ -18,14 +19,16 @@
 import ParentComp from './components/parentComp.vue';
 // import SlotParent from './components/slotParent.vue'
 import FramE from './components/framE.vue';
+import scopedSlotParent from './components/scopedSlotParent.vue';
 
 export default {
   name: 'App',
   components: {
     // SlotParent,
     FramE,
-    ParentComp
-}
+    ParentComp,
+    scopedSlotParent,
+  }
 }
 </script>
 

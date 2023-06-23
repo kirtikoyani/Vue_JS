@@ -5,6 +5,8 @@
 <prop-drill-parent/>
 <search-comp/>
 <event-bus/>
+<provide-inject-parent/>
+<event-bus-parent/>
 </div>
 </template>
 
@@ -14,6 +16,8 @@ import RefVsNormal from './components/RefVsNormal.vue'
 import PropDrillParent from './components/PropDrillParent.vue'
 import EventBus from './components/eventBus.vue'
 import SearchComp from './components/searchComp.vue'
+import ProvideInjectParent from './components/provideInjectParent.vue'
+import EventBusParent from './components/eventBusParent.vue'
 
 export default {
   name: 'App',
@@ -22,7 +26,9 @@ export default {
     RefVsNormal,
     PropDrillParent,
     EventBus,
-    SearchComp
+    SearchComp,
+    ProvideInjectParent,
+    EventBusParent
   }
 }
 </script>
