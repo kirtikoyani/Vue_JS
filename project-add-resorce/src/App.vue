@@ -1,24 +1,19 @@
 <template>
 <div id="app">
-    <daynamicCompEx1 />
-    <FeatchData/>
-    <TheForm/>
-
+    <the-header title="RememberMe"></the-header>
+    <the-resources></the-resources>
 </div>
 </template>
 
 <script>
-import daynamicCompEx1 from './components/daynamicCompEx1.vue'
-import FeatchData from './components/featchData.vue'
-import TheForm from './components/TheForm.vue'
-
+import TheHeader from './components/layouts/TheHeader.vue';
+import TheResources from './components/learning-resources/TheResources.vue';
 
 export default {
     name: 'App',
     components: {
-        daynamicCompEx1,
-        FeatchData,
-        TheForm
+        TheHeader,
+        TheResources
     }
 }
 </script>
